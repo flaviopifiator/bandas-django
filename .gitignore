@@ -1,0 +1,5 @@
+# IDE Chino.
+.idea
+
+*/migrations/*
+__pycache__
