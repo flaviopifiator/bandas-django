@@ -17,7 +17,7 @@ class Album(EventUser, models.Model):
     fecha = models.DateField()
 
     def __str__(self):
-        return '%s => %s' % (self.banda, self.titulo)
+        return '%s => %s' % (self.banda, self.titulo).
 
 
 class Genero(EventUser, models.Model):
