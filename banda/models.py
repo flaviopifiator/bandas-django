@@ -7,6 +7,7 @@ class Banda(EventUser, models.Model):
     nombre = models.CharField(max_length=150)
     fecha_fundacion = models.DateField()
 
+
     def __str__(self):
         return 'Banda: %s' % self.nombre
 
@@ -29,7 +30,7 @@ class Genero(EventUser, models.Model):
 
 class Cancion(EventUser, models.Model):
     titulo = models.CharField(max_length=150)
-    duracion = models.Time() #tipo de dato para duracion?
+    duracion = models.TimeField()
     album = models.ForeignKey(Album)
     letra = models.TextField()
 
