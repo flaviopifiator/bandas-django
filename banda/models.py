@@ -26,3 +26,12 @@ class Genero(EventUser, models.Model):
 
     def __str__(self):
         return 'Género: %s' % self.nombre
+
+class Cancion(EventUser, models.Model):
+    titulo = models.CharField(max_length=150)
+    duracion = models.Time() #tipo de dato para duracion?
+    album = models.ForeignKey(Album)
+    letra = models.TextField()
+
+    def __str__(self):
+        return 'Titulo: %s' % (self.titulo)
